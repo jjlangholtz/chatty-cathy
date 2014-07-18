@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.create(name: auth_hash[:info][:name], provider: auth_hash[:provider], uid: auth_hash[:uid])
+    @user = User.find_or_create_by(name: auth_hash[:info][:name], provider: auth_hash[:provider], uid: auth_hash[:uid])
     redirect_to root_url
   end
 
