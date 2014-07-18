@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 describe User, '#name' do
   it "returns the concatenated first and last name" do

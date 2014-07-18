@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 feature "User visits home page" do
   scenario "they see the title of the page" do
