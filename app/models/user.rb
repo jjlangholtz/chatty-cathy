@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
       followers[tweet.user.name] += 1
     end
 
-    followers
+    followers.sort_by { |name, count| count }.reverse
   end
 
   private

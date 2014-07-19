@@ -1,1 +1,3 @@
-<%= @followers %>
+<% @followers.each do |follower| %>
+  <p><%= follower[0] %> | <%= follower[1] %></p>
+<% end %>
