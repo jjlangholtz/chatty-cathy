@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
 
   def unfollow_user(user)
     twitter_client
-    @client.post 'https://api.twitter.com/1.1/friendships/destroy.json', user_id: user
+    friendship_to_destroy = timeline[user].user.uid
+    @client.post 'https://api.twitter.com/1.1/friendships/destroy.json', user_id: friendship_to_destroy
   end
 end
