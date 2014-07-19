@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @user = User.find(3)
-    @timeline = @user.timeline
+    @user = current_user
+    @followers = @user.followers
   end
 end

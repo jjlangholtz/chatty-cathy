@@ -1,4 +1,16 @@
 class User < ActiveRecord::Base
+  def followers
+    followers = Hash.new(0)
+
+    timeline.each do |tweet|
+      followers[tweet.user.name] += 1
+    end
+
+    followers
+  end
+
+  private
+
   def timeline
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV['TWITTER_KEY']
