@@ -10,6 +10,11 @@ class SessionsController < ApplicationController
     redirect_to root_url, notice: "Logged in!"
   end
 
+  def destroy
+    session[:current_user_id] = nil
+    redirect_to root_url, notice: "Logged out!"
+  end
+
   private
 
   def auth_hash
