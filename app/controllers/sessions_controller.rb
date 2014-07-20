@@ -7,13 +7,14 @@ class SessionsController < ApplicationController
                                    uid: auth_hash[:uid], token: auth_hash[:credentials][:token],
                                    secret: auth_hash[:credentials][:secret])
     session[:current_user_id] = @user.id
-    redirect_to root_url, notice: 'You are logged in'
+    redirect_to root_url, notice: 'You have successfully logged in.'
   end
 
   def destroy
     session[:current_user_id] = nil
-    redirect_to root_url, notice: 'You are logged out'
+    redirect_to root_url, notice: 'You have successfully logged out.'
   end
+
   private
 
   def auth_hash

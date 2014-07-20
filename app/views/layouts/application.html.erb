@@ -4,21 +4,25 @@
     <title>Chatty Cathy</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <% if notice %>
-      <div data-alert class="alert-box success radius">
-        <%= notice %>
-        <a href="#" class="close">&times;</a>
-      </div>
-    <% end %>
-    <% if alert %>
-      <div data-alert class="alert-box alert radius">
-        <%= alert %>
-        <a href="#" class="close">&times;</a>
-      </div>
-    <% end %>
+    <div class="large-6 columns large-centered">
+      <% if notice %>
+        <div data-alert class="alert-box info radius">
+          <%= notice %>
+          <a href="#" class="close">&times;</a>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div data-alert class="alert-box alert radius">
+          <%= alert %>
+          <a href="#" class="close">&times;</a>
+        </div>
+      <% end %>
+    </div>
+
     <%= yield %>
 
   </body>

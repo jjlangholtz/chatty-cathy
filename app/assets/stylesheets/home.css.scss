@@ -6,6 +6,10 @@ body {
   background-image: url('congruent_outline.png');
 }
 
+.alert-box {
+  margin-top: 20px;
+}
+
 a#logout {
   font-size: 18px;
   color: $dark-gray;
