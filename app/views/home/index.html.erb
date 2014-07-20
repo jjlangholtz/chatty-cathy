@@ -1,7 +1,10 @@
 <div class="row">
   <div class="large-3 columns">
     <div class="row followee">
-      <h2>Profile</h2>
+      <h2><%= @user.name %></h2>
+    </div>
+    <div class="row followee">
+      <%= link_to "Log out", logout_path, class: 'right', id: 'logout' %>
     </div>
   </div>
 

@@ -1,7 +1,18 @@
 $light-gray: #e1e8ed;
+$dark-gray: #8899a6;
+$black: #66757f;
 
 body {
   background-image: url('congruent_outline.png');
+}
+
+a#logout {
+  font-size: 18px;
+  color: $dark-gray;
+
+  &:hover {
+    color: $light-gray;
+  }
 }
 
 .followee {
@@ -22,7 +33,7 @@ body {
   }
 
   h2 {
-    color: #66757f;
+    color: $black;
     font-size: 22px;
     font-weight: 300;
     line-height: 22px;
@@ -38,8 +49,10 @@ body {
   }
 
   .screen-name {
-    color: #8899a6;
+    color: $dark-gray;
     font-size: 13px;
+    display: block;
+    margin-bottom: 8px;
   }
 
   a {
@@ -51,5 +64,12 @@ body {
     &:hover {
       color: #66757f;
     }
+  }
+
+  p {
+    font-size: 32px;
+    font-style: bold;
+    margin: 0;
+    color: $black;
   }
 }
