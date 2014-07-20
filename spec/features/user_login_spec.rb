@@ -6,9 +6,10 @@ feature "Sign up as User" do
   end
 
   scenario "visit sign-up page" do
-    expect(page).to have_css '.sign-up', 'Sign up'
+    expect(page).to have_css '.button', 'Sign up with Twitter'
   end
 
-  scenario "click 'Sign in with Twitter'" do
+  scenario "click 'Sign up with Twitter'" do
+    click_link 'Sign up with Twitter'
   end
 end
