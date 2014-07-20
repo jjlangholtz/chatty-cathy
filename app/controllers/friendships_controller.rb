@@ -1,4 +1,4 @@
-class FriendshipController < ApplicationController
+class FriendshipsController < ApplicationController
   def destroy
     @user = current_user
     @user.unfollow_user(params[:uid])

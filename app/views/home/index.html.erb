@@ -1,3 +1,4 @@
-<% @followers.each do |follower| %>
-  <p><%= follower[0] %> | <%= follower[1] %></p>
+<% @followees.each do |followee| %>
+  <p><%= followee[0].name %> | <%= followee[1] %></p>
+  <%= link_to "Unfollow", unfollow_path(followee[0].id) %>
 <% end %>

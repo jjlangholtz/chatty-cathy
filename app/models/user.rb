@@ -1,15 +1,21 @@
 class User < ActiveRecord::Base
-  def followers
-    followers = Hash.new(0)
+  def followees
+    followees = Hash.new(0)
 
     timeline.each do |tweet|
-      followers[tweet.user.name] += 1
+      followees[tweet.user] += 1
     end
 
-    followers.sort_by { |name, count| count }.reverse
+    followees.sort_by { |name, count| count }.reverse
+  end
+
+  def unfollow_user(user)
+    twitter_client
+    @client.post '/1.1/friendships/destroy.json', user_id: user
   end
 
   private
+
   def twitter_client
     @client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV['TWITTER_KEY']
@@ -22,10 +28,5 @@ class User < ActiveRecord::Base
   def timeline
     twitter_client
     @client.home_timeline(count: 200)
-  end
-
-  def unfollow_user(user)
-    twitter_client
-    @client.post 'https://api.twitter.com/1.1/friendships/destroy.json', user_id: user
   end
 end
