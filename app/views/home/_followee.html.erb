@@ -1,16 +1,19 @@
 <div class="row followee">
-  <div class="large-2 columns">
+  <div class="large-3 columns">
     <%= image_tag followee[0].profile_image_url %>
   </div>
 
-  <div class="large-10 columns">
+  <div class="large-8 columns">
     <strong class="full-name"><%= followee[0].name %></strong>
     <span class="screen-name">@<%= followee[0].screen_name %></span>
     <div>
-      <span>Tweets: <%= followee[1] %></span>
-      <%= link_to unfollow_path(followee[0].id), class: 'right' do %>
+      <%= link_to unfollow_path(followee[0].id) do %>
         <%= fa_icon "meh-o", text: "Unfollow" %>
       <% end %>
     </div>
+  </div>
+
+  <div class="large-1 columns">
+    <span class="text-center tweet-count"><%= followee[1] %></span>
   </div>
 </div>
