@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Chatty Cathy</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Chatty Cathy</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <% if notice %>
+      <div data-alert class="alert-box success radius">
+        <%= notice %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div data-alert class="alert-box alert radius">
+        <%= alert %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
+    <%= yield %>
 
-<%= yield %>
-
-</body>
+  </body>
 </html>
