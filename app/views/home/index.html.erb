@@ -1,4 +1,6 @@
-<% @followees.each do |followee| %>
-  <p><%= followee[0].name %> | <%= followee[1] %></p>
-  <%= link_to "Unfollow", unfollow_path(followee[0].id) %>
-<% end %>
+<div class="large-4 columns large-centered">
+  <div class="row followee">
+    <h2>Who's Chatty?</h2>
+  </div>
+  <%= render partial: 'followee', collection: @followees %>
+</div>

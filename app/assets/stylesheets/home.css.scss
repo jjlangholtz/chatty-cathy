@@ -1,0 +1,55 @@
+$light-gray: #e1e8ed;
+
+body {
+  background-image: url('congruent_outline.png');
+}
+
+.followee {
+  background-color: #fff;
+  border-bottom: 1px solid $light-gray;
+  font-family: 'Gotham Narrow SSm';
+  padding: 8px;
+
+  &:first-child {
+    margin-top: 20px;
+    border-radius: 5px 5px 0 0;
+    padding: 12px;
+  }
+
+  &:last-child {
+    margin-bottom: 20px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  h2 {
+    color: #66757f;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
+  img {
+    border-radius: 5px;
+    margin-top: 3px;
+  }
+
+  .full-name {
+    color: #292f33;
+  }
+
+  .screen-name {
+    color: #8899a6;
+    font-size: 13px;
+  }
+
+  a {
+    color: $light-gray;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: 'Helvetica Neue';
+
+    &:hover {
+      color: #66757f;
+    }
+  }
+}
