@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
                                    uid: auth_hash[:uid], token: auth_hash[:credentials][:token],
                                    secret: auth_hash[:credentials][:secret])
     session[:current_user_id] = @user.id
-    redirect_to root_url
+    redirect_to root_url, notice: "Logged in!"
   end
 
   private

@@ -13,7 +13,19 @@
 
   <body>
     <div class='container'>
-        <%= yield %>
+      <% if notice %>
+        <div data-alert class="alert-box info radius">
+          <%= notice %>
+          <a href="#" class="close">&times;</a>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div data-alert class="alert-box warning radius">
+          <%= alert %>
+          <a href="#" class="close">&times;</a>
+        </div>
+      <% end %>
+      <%= yield %>
       <%= javascript_include_tag "application" %>
     </div>
   </body>
