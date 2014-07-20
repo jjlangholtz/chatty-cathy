@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  resource :session, only: :new
+  resource :session, only: [:new, :destroy]
 
   get '/unfollow/:uid', to: 'friendships#destroy', as: :unfollow
 
