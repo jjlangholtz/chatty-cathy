@@ -10,6 +10,15 @@ body {
   margin-top: 20px;
 }
 
+.button {
+  color: $black;
+  background-color: $light-gray;
+
+  &:hover {
+    color: $light-gray;
+    background-color: $black;
+  }
+}
 a#logout {
   font-size: 18px;
   color: $dark-gray;
