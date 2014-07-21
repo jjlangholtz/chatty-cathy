@@ -1,1 +1,12 @@
-<%= link_to "Sign in with Twitter", twitter_auth_path, class: "sign-up" %>
+<div class="row">
+  <div class="large-4 large-offset-4 columns">
+    <div class="row login">
+      <h1>Chatty Cathy</h2>
+    </div>
+    <div class="row login">
+      <i class="fa fa-twitter"></i>
+      <%= link_to "Sign in with Twitter", twitter_auth_path, id: 'login' %>
+      <i class="fa fa-twitter"></i>
+    </div>
+  </div>
+</div>

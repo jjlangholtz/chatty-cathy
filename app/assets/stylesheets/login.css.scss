@@ -1,0 +1,52 @@
+$light-gray: #e1e8ed;
+$dark-gray: #8899a6;
+$black: #66757f;
+
+body {
+  background-image: url('congruent_outline.png');
+}
+
+.login {
+  background-color: #fff;
+  border-bottom: 1px solid $light-gray;
+  font-family: 'Gotham Narrow SSm';
+  padding: 8px;
+  text-align:center;
+
+  &:first-child {
+    margin-top: 20px;
+    border-radius: 5px 5px 0 0;
+    padding: 12px;
+  }
+
+  &:last-child {
+    margin-bottom: 20px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  h1 {
+    color: $black;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
+  img {
+    border-radius: 5px;
+    margin-top: 3px;
+  }
+
+  i {
+    color: $black;
+  }
+  a#login {
+    color: $black;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Helvetica Neue';
+
+    &:hover {
+      color: $light-gray;
+    }
+  }
+}
