@@ -14,6 +14,11 @@ class User < ActiveRecord::Base
     @client.post '/1.1/friendships/destroy.json', user_id: user
   end
 
+  def tweet(message)
+    twitter_client
+    @client.update(message)
+  end
+
   private
 
   def twitter_client
