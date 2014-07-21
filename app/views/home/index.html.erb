@@ -4,10 +4,8 @@
       <h2><%= @user.name %></h2>
     </div>
     <div class="row followee">
+      <%= render 'form' %>
       <%= link_to "Log out", logout_path, class: 'right', id: 'logout' %>
-    </div>
-    <div class="row followee">
-      <%= link_to "Tweet", tweet_path, class: 'right', id: 'logout' %>
     </div>
   </div>
 
