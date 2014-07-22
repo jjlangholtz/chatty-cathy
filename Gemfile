@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 ruby '2.1.2'
-
 gem 'coffee-rails', '~> 4.0.0'
 gem 'font-awesome-rails'
 gem 'foundation-rails'
@@ -23,6 +22,7 @@ gem 'unicorn'
 
 group :development, :test do
   gem 'dotenv-rails'
+  gem 'pry-rails'
   gem 'rspec-rails'
 end
 
