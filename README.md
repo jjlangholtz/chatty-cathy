@@ -7,11 +7,8 @@ timeline).
 ## Installation
 This application uses Postgres.
 
-Install required gems then:
-    bundle install
-
-Set up the database with:
-    rake db:create db:migrate
+``bundle install``
+``rake db:create db:migrate``
 
 ## Contribute
 
